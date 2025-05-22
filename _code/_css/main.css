@@ -1,0 +1,6 @@
+/* Tailwind CSS styles */
+@import "tailwindcss";
+
+@theme {
+  /* --color-tommo-500: oklch(0.72 0.11 178); */
+}
