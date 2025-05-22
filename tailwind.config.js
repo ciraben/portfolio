@@ -5,5 +5,5 @@ export default {
     "./_code/**/*",
     "!./_code/_css/**/*",
     "./content/**/*"
-  ]
+  ],
 }

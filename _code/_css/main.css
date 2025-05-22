@@ -2,5 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  /* --color-tommo-500: oklch(0.72 0.11 178); */
+  --breakpoint-sm: 375px;
+  --breakpoint-md: 525px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+
+  --spacing: 4px;
+}
+
+@utility text-border-* {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: --value(integer)px;
 }
