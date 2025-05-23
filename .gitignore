@@ -3,3 +3,10 @@
 
 # node stuff
 node_modules
+
+# ugly stuff that Github Actions generates anyways
+_code/_css/style.css
+_site/**/*.*
+
+# this tracks a dir without tracking its contents
+!**/.visible
