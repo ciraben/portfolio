@@ -160,8 +160,8 @@
   }
 }
 @layer utilities {
-  .m-8 {
-    margin: calc(var(--spacing) * 8);
+  .m-1 {
+    margin: calc(var(--spacing) * 1);
   }
   .contents {
     display: contents;
@@ -184,11 +184,23 @@
   .items-end {
     align-items: flex-end;
   }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .bg-black {
     background-color: var(--color-black);
   }
-  .py-\[12vw\] {
-    padding-block: 12vw;
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .pb-\[12vw\] {
+    padding-bottom: 12vw;
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+  .font-sans {
+    font-family: var(--font-sans);
   }
   .text-\[30vw\]\/\[23vw\] {
     font-size: 30vw;
@@ -206,15 +218,17 @@
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
   }
-  .text-black {
-    color: var(--color-black);
-  }
   .opacity-50 {
     opacity: 50%;
   }
   .text-border-3 {
     -webkit-text-fill-color: transparent;
     -webkit-text-stroke: 3px;
+  }
+  .sm\:m-4 {
+    @media (width >= 375px) {
+      margin: calc(var(--spacing) * 4);
+    }
   }
   .sm\:text-border-4 {
     @media (width >= 375px) {
@@ -232,21 +246,15 @@
       height: calc(var(--spacing) * 4);
     }
   }
-  .md\:py-6 {
+  .md\:pb-6 {
     @media (width >= 525px) {
-      padding-block: calc(var(--spacing) * 6);
+      padding-bottom: calc(var(--spacing) * 6);
     }
   }
   .md\:text-\[158px\]\/\[120px\] {
     @media (width >= 525px) {
       font-size: 158px;
       line-height: 120px;
-    }
-  }
-  .md\:text-border-4 {
-    @media (width >= 525px) {
-      -webkit-text-fill-color: transparent;
-      -webkit-text-stroke: 4px;
     }
   }
 }
