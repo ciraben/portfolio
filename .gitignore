@@ -10,3 +10,6 @@ _site/**/*.*
 
 # this tracks a dir without tracking its contents
 !**/.visible
+
+# i hate committing changes to TODO lists
+TODO.md
