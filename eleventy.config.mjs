@@ -27,4 +27,8 @@ export default function (eleventyConfig) {
   // we .gitignored `_site/` but still want tailwind changes to trigger
   // browser page auto-refresh
   eleventyConfig.setUseGitIgnore(false);
+
+  // set some project defaults for assembling parts of the page
+  // this tells 11ty how to understand our project's file structure
+  eleventyConfig.setDataFileBaseName("_");
 }
