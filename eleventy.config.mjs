@@ -23,6 +23,8 @@ export default function (eleventyConfig) {
 
   //Whenever the generated CSS changes, copy the CSS to its final destination
   eleventyConfig.addPassthroughCopy({ "_code/_css/style.css": "css/style.css" });
+  // same for custom fonts!
+  eleventyConfig.addPassthroughCopy({ "_code/SFNS.ttf": "SFNS.ttf" });
 
   // we .gitignored `_site/` but still want tailwind changes to trigger
   // browser page auto-refresh

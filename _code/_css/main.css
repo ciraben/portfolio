@@ -1,6 +1,14 @@
 /* Tailwind CSS styles */
 @import "tailwindcss";
 
+@font-face {
+  font-family: "sfns";
+  src:
+    local(".SFNS-Regular"),
+    local(".SF NS"),
+    url("../SFNS.ttf");
+}
+
 @theme {
   --breakpoint-sm: 375px;
   --breakpoint-md: 525px;
@@ -8,6 +16,8 @@
   --breakpoint-xl: 1024px;
 
   --spacing: 4px;
+
+  --font-title: "sfns", var(--font-sans);
 }
 
 @utility text-border-* {
