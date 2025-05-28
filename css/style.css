@@ -13,6 +13,7 @@
     --font-weight-light: 300;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-title: "sfns", var(--font-sans);
   }
 }
 @layer base {
@@ -210,8 +211,8 @@
   .font-mono {
     font-family: var(--font-mono);
   }
-  .font-sans {
-    font-family: var(--font-sans);
+  .font-title {
+    font-family: var(--font-title);
   }
   .text-\[30vw\]\/\[23vw\] {
     font-size: 30vw;
@@ -268,6 +269,10 @@
       line-height: 120px;
     }
   }
+}
+@font-face {
+  font-family: "sfns";
+  src: local(".SFNS-Regular"), local(".SF NS"), url("/SFNS.ttf");
 }
 @property --tw-font-weight {
   syntax: "*";
