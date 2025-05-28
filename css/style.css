@@ -272,7 +272,7 @@
 }
 @font-face {
   font-family: "sfns";
-  src: local(".SFNS-Regular"), local(".SF NS"), url("/SFNS.ttf");
+  src: local(".SFNS-Regular"), local(".SF NS"), url("../SFNS.ttf");
 }
 @property --tw-font-weight {
   syntax: "*";
