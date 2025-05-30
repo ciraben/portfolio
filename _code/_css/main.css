@@ -4,9 +4,10 @@
 @font-face {
   font-family: "sfns";
   src:
-    local(".SFNS-Regular"),
-    local(".SF NS"),
-    url("../SFNS.ttf");
+    url("../fonts/SFNS-partial.woff2") format("woff2"),
+    url("../fonts/SFNS-partial.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 300 1000;
 }
 
 @theme {
