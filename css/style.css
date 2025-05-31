@@ -272,7 +272,7 @@
 }
 @font-face {
   font-family: "sfns";
-  src: local(".SFNS-Regular"), local(".SF NS"),   url("../SFNS-partial.woff2") format("woff2");
+  src: local(".SFNS"), local(".SFNS-Regular"), local(".SF NS"),   url("../SFNS-partial.woff2") format("woff2");
   font-style: normal;
   font-weight: 300 1000;
 }
