@@ -1,3 +1,7 @@
+---
+date: 2025-05-08
+---
+
 ## vines
 
 one time i helped the [**VINES art festival**](https://www.vinesartsociety.com/about-us) in vancouver launch an augmented reality (AR) exhibit about native plants and animals.

@@ -1,3 +1,7 @@
+---
+date: 2025-05-02
+---
+
 ## cheevy
 
 here's [**a CLI tool i made**](https://github.com/ciraben/cheevy) for tracking achievements during [**The November Nethack Tournament**](https://tnnt.org/) (which i think is pretty fun).

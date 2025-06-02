@@ -1,3 +1,7 @@
+---
+date: 2025-05-10
+---
+
 ## jaz whitford's portfolio
 
 jaz asked me to create [**an online portfolio of their work**](https://www.jazwhitford.com/).

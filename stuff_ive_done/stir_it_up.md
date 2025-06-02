@@ -1,3 +1,7 @@
+---
+date: 2025-05-03
+---
+
 ## stir it up
 
 one time i made [**a site mockup**](https://ciraben.github.io/stiritup/) for a restaurant i like.

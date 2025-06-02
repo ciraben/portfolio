@@ -1,3 +1,7 @@
+---
+date: 2025-05-11
+---
+
 ## victoria soundscape
 
 recently i joined a game jam and made a short text adventure in rails.

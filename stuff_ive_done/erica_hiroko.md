@@ -1,3 +1,7 @@
+---
+date: 2025-05-07
+---
+
 ## erica isomura's portfolio
 
 erica writes beautifully and asked me to maintain [**her portfolio site**](https://ericahiroko.ca/about.html) for a bit.

@@ -1,3 +1,7 @@
+---
+date: 2025-05-12
+---
+
 ## thrill jockey
 
 recently i helped develop an e-commerce store for american record label [**Thrill Jockey**](https://www.thrilljockey.com/index).

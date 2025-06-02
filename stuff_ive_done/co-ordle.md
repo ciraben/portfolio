@@ -1,3 +1,7 @@
+---
+date: 2025-05-04
+---
+
 ## co-ordle bot
 
 this is [**a discord bot i made**](https://github.com/ciraben/co-ordle-nerdle) for tag-teaming games of wordle with friends.

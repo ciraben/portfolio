@@ -1,3 +1,7 @@
+---
+date: 2025-05-05
+---
+
 ## webhack
 
 another time i joined a game jam and made a screensaver rogue-like.

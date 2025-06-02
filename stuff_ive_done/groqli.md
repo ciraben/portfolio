@@ -1,3 +1,7 @@
+---
+date: 2025-05-06
+---
+
 ## groqli
 
 here's [**a CLI tool i made**](https://github.com/ciraben/groqcli) for chatting with LLMs.

@@ -27,7 +27,7 @@
     </div>
 
     <ul id="stuff-ive-done" class="flex flex-col gap-4">
-      {% for stuff in collections.stuff-ive-done %}
+      {% for stuff in collections.stuff-ive-done reversed %}
         {% if stuff.fileSlug[0] != "_" %}
           <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl">
               {{ stuff.templateContent }}

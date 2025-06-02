@@ -1,3 +1,7 @@
+---
+date: 2025-05-09
+---
+
 ## jester
 
 one time i joined a game jam with my girlfriend and we made a cute game together.
