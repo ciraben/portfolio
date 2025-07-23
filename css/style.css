@@ -11,7 +11,10 @@
     --color-white: #fff;
     --spacing: 4px;
     --container-3xl: 48rem;
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
     --font-weight-light: 300;
+    --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
@@ -165,8 +168,11 @@
   }
 }
 @layer utilities {
-  .m-1 {
-    margin: calc(var(--spacing) * 1);
+  .m-2 {
+    margin: calc(var(--spacing) * 2);
+  }
+  .mb-12 {
+    margin-bottom: calc(var(--spacing) * 12);
   }
   .contents {
     display: contents;
@@ -176,6 +182,9 @@
   }
   .h-\[3vw\] {
     height: 3vw;
+  }
+  .w-full {
+    width: 100%;
   }
   .max-w-3xl {
     max-width: var(--container-3xl);
@@ -192,14 +201,23 @@
   .flex-row {
     flex-direction: row;
   }
+  .items-center {
+    align-items: center;
+  }
   .items-end {
     align-items: flex-end;
+  }
+  .justify-around {
+    justify-content: space-around;
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .place-self-center {
+    place-self: center;
   }
   .border-custom {
     background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='8' ry='8' stroke='black' stroke-width='2' stroke-dasharray='8%2c4' stroke-dashoffset='0' stroke-linecap='butt'/%3e%3c/svg%3e");
@@ -226,6 +244,10 @@
   .font-title {
     font-family: var(--font-title);
   }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
+  }
   .text-\[30vw\]\/\[23vw\] {
     font-size: 30vw;
     line-height: 23vw;
@@ -237,6 +259,10 @@
   .font-\[1000\] {
     --tw-font-weight: 1000;
     font-weight: 1000;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
   }
   .font-light {
     --tw-font-weight: var(--font-weight-light);
@@ -263,6 +289,16 @@
   .sm\:m-4 {
     @media (width >= 375px) {
       margin: calc(var(--spacing) * 4);
+    }
+  }
+  .sm\:flex-row {
+    @media (width >= 375px) {
+      flex-direction: row;
+    }
+  }
+  .sm\:gap-0 {
+    @media (width >= 375px) {
+      gap: calc(var(--spacing) * 0);
     }
   }
   .sm\:text-border-4 {
