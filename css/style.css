@@ -7,6 +7,7 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-pink-700: oklch(52.5% 0.223 3.958);
     --color-black: #000;
     --color-white: #fff;
     --spacing: 4px;
@@ -17,9 +18,12 @@
     --font-weight-bold: 700;
     --radius-lg: 0.5rem;
     --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
     --font-title: "sfns", var(--font-sans);
+    --color-pink-350: #ED8BC3;
   }
 }
 @layer base {
@@ -268,8 +272,14 @@
     --tw-font-weight: var(--font-weight-light);
     font-weight: var(--font-weight-light);
   }
+  .no-underline {
+    text-decoration-line: none;
+  }
   .opacity-50 {
     opacity: 50%;
+  }
+  .delay-100 {
+    transition-delay: 100ms;
   }
   .duration-300 {
     --tw-duration: 300ms;
@@ -364,30 +374,52 @@
       }
     }
   }
-  .xl\:hover\:-mr-8 {
-    @media (width >= 1024px) {
-      &:hover {
-        @media (hover: hover) {
-          margin-right: calc(var(--spacing) * -8);
-        }
-      }
-    }
-  }
-  .xl\:hover\:ml-8 {
-    @media (width >= 1024px) {
-      &:hover {
-        @media (hover: hover) {
-          margin-left: calc(var(--spacing) * 8);
-        }
-      }
-    }
-  }
 }
 @font-face {
   font-family: "sfns";
   src: url("../fonts/SFNS-partial.woff2") format("woff2"), url("../fonts/SFNS-partial.ttf") format("truetype");
   font-style: normal;
   font-weight: 300 1000;
+}
+@layer base {
+  a {
+    display: inline-block;
+    transition-property: transform, translate, scale, rotate;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    transition-delay: 100ms;
+    --tw-duration: 400ms;
+    transition-duration: 400ms;
+    --tw-ease: var(--ease-in-out);
+    transition-timing-function: var(--ease-in-out);
+    &:visited {
+      color: var(--color-pink-700);
+    }
+    &:hover {
+      @media (hover: hover) {
+        --tw-translate-y: -1px;
+        translate: var(--tw-translate-x) var(--tw-translate-y);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        --tw-scale-x: 103%;
+        --tw-scale-y: 103%;
+        --tw-scale-z: 103%;
+        scale: var(--tw-scale-x) var(--tw-scale-y);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        color: var(--color-pink-350);
+      }
+    }
+    &:hover {
+      @media (hover: hover) {
+        text-decoration-line: underline;
+      }
+    }
+  }
 }
 @property --tw-font-weight {
   syntax: "*";
@@ -401,12 +433,48 @@
   syntax: "*";
   inherits: false;
 }
+@property --tw-translate-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-translate-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-scale-x {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-y {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
+@property --tw-scale-z {
+  syntax: "*";
+  inherits: false;
+  initial-value: 1;
+}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
       --tw-font-weight: initial;
       --tw-duration: initial;
       --tw-ease: initial;
+      --tw-translate-x: 0;
+      --tw-translate-y: 0;
+      --tw-translate-z: 0;
+      --tw-scale-x: 1;
+      --tw-scale-y: 1;
+      --tw-scale-z: 1;
     }
   }
 }
