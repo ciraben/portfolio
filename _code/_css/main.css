@@ -19,6 +19,14 @@
   --spacing: 4px;
 
   --font-title: "sfns", var(--font-sans);
+
+  --color-pink-350: #ED8BC3;
+}
+
+@layer base {
+  a {
+    @apply inline-block transition-transform delay-100 duration-400 ease-in-out hover:scale-103 hover:-translate-y-px hover:underline hover:text-pink-350 visited:text-pink-700;
+  }
 }
 
 @utility text-border-* {
