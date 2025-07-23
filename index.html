@@ -8,34 +8,52 @@
   </head>
 
   <body class="bg-stripes">
-    <div class="max-w-[1000px] flex flex-col m-1 sm:m-4 p-4 gap-4 rounded-lg bg-white">
-      <div id="title" class="font-title text-[30vw]/[23vw] md:text-[158px]/[120px]">
-        <div class="flex flex-col">
-          <div class="flex flex-row items-end">
-            <div>
-              <div class="font-[750]">tom</div>
-              <div class="text-border-3 sm:text-border-4 font-[1000]">van</div>
+    <div class="max-w-[1000px] flex flex-col m-2 sm:m-4 gap-4">
+      <div class="flex flex-col p-4 gap-4 rounded-lg bg-white">
+        <div id="title" class="font-title text-[30vw]/[23vw] md:text-[158px]/[120px]">
+          <div class="flex flex-col">
+            <div class="flex flex-row items-end">
+              <div>
+                <div class="font-[750]">tom</div>
+                <div class="text-border-3 sm:text-border-4 font-[1000]">van</div>
+              </div>
+
+              <div class="flex flex-col">
+                <div class="pb-[12vw] md:pb-6 opacity-50 rotate-5">🌸</div>
+                <div class="bg-black h-[3vw] md:h-4 md:mt-10"></div>
+              </div>
             </div>
 
-            <div class="flex flex-col">
-              <div class="pb-[12vw] md:pb-6 opacity-50 rotate-5">🌸</div>
-              <div class="bg-black h-[3vw] md:h-4 md:mt-10"></div>
-            </div>
+            <div class="font-light">manen</div>
           </div>
-
-          <div class="font-light">manen</div>
         </div>
+
+        <ul id="stuff-ive-done" class="flex flex-col gap-4">
+          {% for stuff in collections.stuff-ive-done reversed %}
+            {% if stuff.fileSlug[0] != "_" %}
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+                  {{ stuff.templateContent }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
       </div>
 
-      <ul id="stuff-ive-done" class="flex flex-col gap-4">
-        {% for stuff in collections.stuff-ive-done reversed %}
-          {% if stuff.fileSlug[0] != "_" %}
-            <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
-                {{ stuff.templateContent }}
-            </li>
-          {% endif %}
-        {% endfor %}
-      </ul>
+      <address class="p-4 rounded-lg bg-white">
+        <div class="border-custom p-4">
+          <ul class="w-full flex flex-col sm:flex-row justify-around items-center gap-2 sm:gap-0">
+            <li><a class="font-bold" href="mailto:tom.on.github@gmail.com">email.me</a></li>
+            <li><a class="font-bold" href="https://www.linkedin.com/in/tom-van-manen/">linkedin.me</a></li>
+            <li><a class="font-bold" href="https://github.com/ciraben">github.me</a></li>
+          </ul>
+        </div>
+      </address>
+
+      <footer class="place-self-center flex flex-col items-center mb-12 p-4 rounded-lg bg-white">
+        <a class="opacity-50 rotate-5 text-3xl" href="#top">🌸</a>
+        <br>
+        <p>© {{ "now" | date: "%Y" }} Tom Van Manen</p>
+      </footer>
     </div>
   </body>
 </html>
