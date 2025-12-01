@@ -9,81 +9,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
 
-  <body class="bg-stripes">
-    <div class="max-w-[1000px] flex flex-col m-2 sm:m-4 gap-4">
-      <div class="flex flex-col p-4 gap-4 rounded-lg bg-beige">
-        <div id="title" class="font-title text-[30vw]/[23vw] md:text-[158px]/[120px]">
-          <div class="flex flex-col">
-            <div class="flex flex-row items-end">
-              <div>
-                <div class="font-[750]">tom</div>
-                <div class="text-border-3 sm:text-border-4 font-[1000]">van</div>
+  <body class="bg-stripes xl:flex xl:justify-center">
+    <div class="xl:w-[1300px]">
+      <div class="max-w-[1000px] flex flex-col m-2 sm:m-4 xl:mr-auto gap-4">
+        <div class="flex flex-col p-4 gap-4 rounded-lg bg-beige">
+          <div id="title" class="font-title text-[30vw]/[23vw] md:text-[158px]/[120px]">
+            <div class="flex flex-col">
+              <div class="flex flex-row items-end">
+                <div>
+                  <div class="font-[750]">tom</div>
+                  <div class="text-border-3 sm:text-border-4 font-[1000]">van</div>
+                </div>
+
+                <div class="flex flex-col">
+                  <div class="pb-[12vw] md:pb-6 opacity-50 rotate-5">🌸</div>
+                  <div class="bg-black h-[3vw] md:h-4 md:mt-10"></div>
+                </div>
               </div>
 
-              <div class="flex flex-col">
-                <div class="pb-[12vw] md:pb-6 opacity-50 rotate-5">🌸</div>
-                <div class="bg-black h-[3vw] md:h-4 md:mt-10"></div>
-              </div>
+              <div class="font-light">manen</div>
             </div>
-
-            <div class="font-light">manen</div>
           </div>
-        </div>
 
-        <h2 class="font-subtitle font-thin text-[60px]/[45px]">web contracts</h2>
+          <h2 class="font-subtitle font-thin text-[60px]/[45px]">web contracts</h2>
 
-        <ul id="web-stuff" class="flex flex-col gap-4">
-          {% for stuff in collections.web reversed %}
-            {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
-                  {{ stuff.templateContent }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+          <ul id="web-stuff" class="flex flex-col gap-4">
+            {% for stuff in collections.web reversed %}
+              {% if stuff.fileSlug[0] != "_" %}
+                <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
+                    {{ stuff.templateContent }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
 
-        <h2 class="font-subtitle font-thin text-[60px]/[45px]">game dev</h2>
+          <h2 class="font-subtitle font-thin text-[60px]/[45px]">game dev</h2>
 
-        <ul id="game-dev" class="flex flex-col gap-4">
-          {% for stuff in collections.games reversed %}
-            {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
-                  {{ stuff.templateContent }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
+          <ul id="game-dev" class="flex flex-col gap-4">
+            {% for stuff in collections.games reversed %}
+              {% if stuff.fileSlug[0] != "_" %}
+                <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
+                    {{ stuff.templateContent }}
+                </li>
+              {% endif %}
+            {% endfor %}
+          </ul>
 
-        <h2 class="font-subtitle font-thin text-[60px]/[45px]">other tools</h2>
+          <h2 class="font-subtitle font-thin text-[60px]/[45px]">other tools</h2>
 
-        <ul id="other-tools" class="flex flex-col gap-4">
-          {% assign remaining_stuff = collections.stuff-ive-done | withoutTag: "web" | withoutTag: "games" %}
+          <ul id="other-tools" class="flex flex-col gap-4">
+            {% assign remaining_stuff = collections.stuff-ive-done | withoutTag: "web" | withoutTag: "games" %}
 
-          {% for stuff in remaining_stuff reversed %}
-            {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
-                  {{ stuff.templateContent }}
-              </li>
-            {% endif %}
-          {% endfor %}
-        </ul>
-      </div>
-
-      <address class="p-4 rounded-lg bg-beige">
-        <div class="border-custom p-4">
-          <ul class="w-full flex flex-col sm:flex-row justify-around items-center gap-2 sm:gap-0">
-            <li><a class="font-bold" href="mailto:tom.on.github@gmail.com">email.me</a></li>
-            <li><a class="font-bold" href="https://www.linkedin.com/in/tom-van-manen/">linkedin.me</a></li>
-            <li><a class="font-bold" href="https://github.com/ciraben">github.me</a></li>
+            {% for stuff in remaining_stuff reversed %}
+              {% if stuff.fileSlug[0] != "_" %}
+                <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
+                    {{ stuff.templateContent }}
+                </li>
+              {% endif %}
+            {% endfor %}
           </ul>
         </div>
-      </address>
 
-      <footer class="place-self-center flex flex-col items-center mb-12 p-4 rounded-lg bg-beige">
-        <a class="opacity-50 rotate-5 text-3xl no-underline" href="#top">🌸</a>
-        <br>
-        <p>© {{ "now" | date: "%Y" }} Tom Van Manen</p>
-      </footer>
+        <address class="p-4 rounded-lg bg-beige">
+          <div class="border-custom p-4">
+            <ul class="w-full flex flex-col sm:flex-row justify-around items-center gap-2 sm:gap-0">
+              <li><a class="font-bold" href="mailto:tom.on.github@gmail.com">email.me</a></li>
+              <li><a class="font-bold" href="https://www.linkedin.com/in/tom-van-manen/">linkedin.me</a></li>
+              <li><a class="font-bold" href="https://github.com/ciraben">github.me</a></li>
+            </ul>
+          </div>
+        </address>
+
+        <footer class="place-self-center flex flex-col items-center mb-12 p-4 rounded-lg bg-beige">
+          <a class="opacity-50 rotate-5 text-3xl no-underline" href="#top">🌸</a>
+          <br>
+          <p>© {{ "now" | date: "%Y" }} Tom Van Manen</p>
+        </footer>
+      </div>
     </div>
   </body>
 </html>
