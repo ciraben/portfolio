@@ -11,7 +11,7 @@
 
   <body class="bg-stripes">
     <div class="max-w-[1000px] flex flex-col m-2 sm:m-4 gap-4">
-      <div class="flex flex-col p-4 gap-4 rounded-lg bg-white">
+      <div class="flex flex-col p-4 gap-4 rounded-lg bg-beige">
         <div id="title" class="font-title text-[30vw]/[23vw] md:text-[158px]/[120px]">
           <div class="flex flex-col">
             <div class="flex flex-row items-end">
@@ -35,7 +35,7 @@
         <ul id="web-stuff" class="flex flex-col gap-4">
           {% for stuff in collections.web reversed %}
             {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
                   {{ stuff.templateContent }}
               </li>
             {% endif %}
@@ -47,7 +47,7 @@
         <ul id="game-dev" class="flex flex-col gap-4">
           {% for stuff in collections.games reversed %}
             {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
                   {{ stuff.templateContent }}
               </li>
             {% endif %}
@@ -61,7 +61,7 @@
 
           {% for stuff in remaining_stuff reversed %}
             {% if stuff.fileSlug[0] != "_" %}
-              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out">
                   {{ stuff.templateContent }}
               </li>
             {% endif %}
@@ -69,7 +69,7 @@
         </ul>
       </div>
 
-      <address class="p-4 rounded-lg bg-white">
+      <address class="p-4 rounded-lg bg-beige">
         <div class="border-custom p-4">
           <ul class="w-full flex flex-col sm:flex-row justify-around items-center gap-2 sm:gap-0">
             <li><a class="font-bold" href="mailto:tom.on.github@gmail.com">email.me</a></li>
@@ -79,7 +79,7 @@
         </div>
       </address>
 
-      <footer class="place-self-center flex flex-col items-center mb-12 p-4 rounded-lg bg-white">
+      <footer class="place-self-center flex flex-col items-center mb-12 p-4 rounded-lg bg-beige">
         <a class="opacity-50 rotate-5 text-3xl no-underline" href="#top">🌸</a>
         <br>
         <p>© {{ "now" | date: "%Y" }} Tom Van Manen</p>
