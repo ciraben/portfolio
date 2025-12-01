@@ -1,5 +1,6 @@
 ---
 date: 2025-05-12
+tags: web
 ---
 
 ## thrill jockey

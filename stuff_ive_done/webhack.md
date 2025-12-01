@@ -1,5 +1,6 @@
 ---
 date: 2025-05-05
+tags: games
 ---
 
 ## webhack

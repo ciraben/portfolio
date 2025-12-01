@@ -29,8 +29,36 @@
           </div>
         </div>
 
-        <ul id="stuff-ive-done" class="flex flex-col gap-4">
-          {% for stuff in collections.stuff-ive-done reversed %}
+        <h2 class="font-thin text-[60px]/[45px]">web contracts</h2>
+
+        <ul id="web-stuff" class="flex flex-col gap-4">
+          {% for stuff in collections.web reversed %}
+            {% if stuff.fileSlug[0] != "_" %}
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+                  {{ stuff.templateContent }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <h2 class="font-thin text-[60px]/[45px]">game dev</h2>
+
+        <ul id="game-dev" class="flex flex-col gap-4">
+          {% for stuff in collections.games reversed %}
+            {% if stuff.fileSlug[0] != "_" %}
+              <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
+                  {{ stuff.templateContent }}
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+
+        <h2 class="font-thin text-[60px]/[45px]">other tools</h2>
+
+        <ul id="other-tools" class="flex flex-col gap-4">
+          {% assign remaining_stuff = collections.stuff-ive-done | withoutTag: "web" | withoutTag: "games" %}
+
+          {% for stuff in remaining_stuff reversed %}
             {% if stuff.fileSlug[0] != "_" %}
               <li class="flex flex-col gap-2 border-custom p-4 max-w-3xl md:hover:ml-2 md:hover:-mr-2 lg:hover:ml-3 lg:hover:-mr-3 delay-100 duration-300 ease-in-out bg-white ">
                   {{ stuff.templateContent }}

@@ -1,5 +1,6 @@
 ---
 date: 2025-05-07
+tags: web
 ---
 
 ## erica isomura's portfolio

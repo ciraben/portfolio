@@ -33,4 +33,11 @@ export default function (eleventyConfig) {
   // set some project defaults for assembling parts of the page
   // this tells 11ty how to understand our project's file structure
   eleventyConfig.setDataFileBaseName("_");
+
+  // (liquid) filter for filtering out posts by tag
+  eleventyConfig.addFilter("withoutTag", function (post_list, tag) {
+    return post_list.filter(
+      (post) => !post.data.tags.includes(tag)
+    )
+  });
 }

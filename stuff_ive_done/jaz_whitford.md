@@ -1,5 +1,6 @@
 ---
 date: 2025-05-10
+tags: web
 ---
 
 ## jaz whitford's portfolio
