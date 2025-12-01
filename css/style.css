@@ -390,6 +390,26 @@
       }
     }
   }
+  .xl\:mr-auto {
+    @media (width >= 1024px) {
+      margin-right: auto;
+    }
+  }
+  .xl\:flex {
+    @media (width >= 1024px) {
+      display: flex;
+    }
+  }
+  .xl\:w-\[1300px\] {
+    @media (width >= 1024px) {
+      width: 1300px;
+    }
+  }
+  .xl\:justify-center {
+    @media (width >= 1024px) {
+      justify-content: center;
+    }
+  }
 }
 @font-face {
   font-family: "sfns";
