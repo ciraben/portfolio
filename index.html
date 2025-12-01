@@ -4,6 +4,7 @@
   <head>
     <title>tom's portfolio</title>
     <link rel="preload" href="fonts/SFNS-partial.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/Roboto-partial.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="stylesheet" href="css/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
   </head>
@@ -29,7 +30,7 @@
           </div>
         </div>
 
-        <h2 class="font-thin text-[60px]/[45px]">web contracts</h2>
+        <h2 class="font-subtitle font-thin text-[60px]/[45px]">web contracts</h2>
 
         <ul id="web-stuff" class="flex flex-col gap-4">
           {% for stuff in collections.web reversed %}
@@ -41,7 +42,7 @@
           {% endfor %}
         </ul>
 
-        <h2 class="font-thin text-[60px]/[45px]">game dev</h2>
+        <h2 class="font-subtitle font-thin text-[60px]/[45px]">game dev</h2>
 
         <ul id="game-dev" class="flex flex-col gap-4">
           {% for stuff in collections.games reversed %}
@@ -53,7 +54,7 @@
           {% endfor %}
         </ul>
 
-        <h2 class="font-thin text-[60px]/[45px]">other tools</h2>
+        <h2 class="font-subtitle font-thin text-[60px]/[45px]">other tools</h2>
 
         <ul id="other-tools" class="flex flex-col gap-4">
           {% assign remaining_stuff = collections.stuff-ive-done | withoutTag: "web" | withoutTag: "games" %}

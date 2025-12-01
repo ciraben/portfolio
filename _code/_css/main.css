@@ -10,6 +10,15 @@
   font-weight: 300 1000;
 }
 
+@font-face {
+  font-family: "roboto";
+  src:
+    url("../fonts/Roboto-partial.woff2") format("woff2"),
+    url("../fonts/Roboto-partial.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 100;
+}
+
 @theme {
   --breakpoint-sm: 375px;
   --breakpoint-md: 525px;
@@ -19,6 +28,7 @@
   --spacing: 4px;
 
   --font-title: "sfns", var(--font-sans);
+  --font-subtitle: "roboto", var(--font-sans);
 
   --color-pink-350: #ED8BC3;
 }
